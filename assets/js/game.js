@@ -1,17 +1,48 @@
-// this creates a function named "fight"
-
-function fight() {
-  window.alert("The fight has begun!");
-}
-
 var playerName = window.prompt("What is your robot's name?");
-// what is this??
-console.log(playerName);
+var playerHealth = 100;
+var playerAttack = 10;
 
-console.log("This logs a string, good for leaving yourself a message");
-// this will do math and log 20
-console.log(10 + 10);
-// what is this
-console.log("Our robots name is " + playerName);
+console.log(playerName, playerHealth, playerAttack);
 
-// fight();
+var enemyName = "Roborto";
+var enemyHealth = 50;
+var enemyAttack = 12;
+
+//create function
+var fight = function () {
+  // tells players the round is starting
+  window.alert("Welcome to Robot Gladiators!");
+
+  // subtract 'playerAttack' from 'enemyHealth' and update the variable in 'enemyHealth'
+  enemyHealth = enemyHealth - playerAttack;
+
+  // log a result to the console to confim it worked
+  console.log(
+    playerName +
+      " attacked " +
+      enemyName +
+      ". " +
+      enemyName +
+      " now has " +
+      enemyHealth +
+      " health remaining."
+  );
+
+  // subtract 'enemyAttack' from 'playerHealth' and update the variable in 'playerHealth'
+  playerHealth = playerHealth - enemyAttack;
+
+  // log a result to the console to confirm it worked
+  console.log(
+    enemyName +
+      " attacked " +
+      playerName +
+      ". " +
+      playerName +
+      " nor has " +
+      playerHealth +
+      " health remaining."
+  );
+};
+
+// execute function
+fight();
