@@ -189,10 +189,6 @@ var shop = function () {
   }
 };
 
-/* END GAME FUNCTIONS */
-
-/* GAME INFORMATION / VARIABLES */
-
 // player information
 var playerInfo = {
   name: window.prompt("What is your robot's name?"),
@@ -239,13 +235,6 @@ var enemyInfo = [
     attack: randomNumber(10, 14),
   },
 ];
-
-console.log(enemyInfo);
-console.log(enemyInfo[0]);
-console.log(enemyInfo[0].name);
-console.log(enemyInfo[0]["attack"]);
-
-/* END GAME INFORMATION / VARIABLES */
 
 /* RUN GAME */
 startGame();
